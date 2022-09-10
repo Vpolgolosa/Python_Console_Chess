@@ -1,0 +1,13 @@
+c:\users\1282-19\documents\visual studio 2015\Projects\UnitTestDemo\UnitTestDemo\bin\Debug\UnitTestDemo.exe.config
+c:\users\1282-19\documents\visual studio 2015\Projects\UnitTestDemo\UnitTestDemo\bin\Debug\UnitTestDemo.exe
+c:\users\1282-19\documents\visual studio 2015\Projects\UnitTestDemo\UnitTestDemo\bin\Debug\UnitTestDemo.pdb
+c:\users\1282-19\documents\visual studio 2015\Projects\UnitTestDemo\UnitTestDemo\obj\Debug\UnitTestDemo.csprojResolveAssemblyReference.cache
+c:\users\1282-19\documents\visual studio 2015\Projects\UnitTestDemo\UnitTestDemo\obj\Debug\UnitTestDemo.exe
+c:\users\1282-19\documents\visual studio 2015\Projects\UnitTestDemo\UnitTestDemo\obj\Debug\UnitTestDemo.pdb
+D:\My programms\Other\UnitTestDemo\UnitTestDemo\bin\Debug\UnitTestDemo.exe.config
+D:\My programms\Other\UnitTestDemo\UnitTestDemo\bin\Debug\UnitTestDemo.exe
+D:\My programms\Other\UnitTestDemo\UnitTestDemo\bin\Debug\UnitTestDemo.pdb
+D:\My programms\Other\UnitTestDemo\UnitTestDemo\obj\Debug\UnitTestDemo.csproj.AssemblyReference.cache
+D:\My programms\Other\UnitTestDemo\UnitTestDemo\obj\Debug\UnitTestDemo.csproj.CoreCompileInputs.cache
+D:\My programms\Other\UnitTestDemo\UnitTestDemo\obj\Debug\UnitTestDemo.exe
+D:\My programms\Other\UnitTestDemo\UnitTestDemo\obj\Debug\UnitTestDemo.pdb
