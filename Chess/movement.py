@@ -2,6 +2,7 @@ import time
 import wincondition as wincon
 
 
+# Проверка мувмента ладьи
 def checklad(deck, pi, pj, fi, fj):
     check = None
     log = ""
@@ -49,6 +50,7 @@ def checklad(deck, pi, pj, fi, fj):
     return check, log
 
 
+# Проверка мувмента слона
 def checksl(deck, fi, fj, pi, pj):
     log = ""
     if abs(fi - pi) == abs(fj - pj):
@@ -83,6 +85,7 @@ def checksl(deck, fi, fj, pi, pj):
     return check, log
 
 
+# Функция рокировки
 def kingshuffle(deck, fi, fj, pi, pj, face):
     dist = [[2, 1], [1, 2]]
     if pj == dist[face][0]:
@@ -129,6 +132,7 @@ def kingshuffle(deck, fi, fj, pi, pj, face):
     return check, log
 
 
+# Основная функция проверки мувмента (для всех фигур)
 def checkmove(deck, face, fi, fj, pi, pj):
     enemfig = [["12", "22", "32", "42", "52", "62", "0"], ["11", "21", "31", "41", "51", "61", "0"]]
     oenemfig = [["12", "22", "32", "42", "52", "62"], ["11", "21", "31", "41", "51", "61"]]
@@ -141,7 +145,7 @@ def checkmove(deck, face, fi, fj, pi, pj):
                 if pi == fi - 1:
                     check = 1
                 elif pi == fi - 2 and fi == 6:
-                    if deck[fi-1][fj] == "0":
+                    if deck[fi - 1][fj] == "0":
                         check = 1
                     else:
                         check = 0
@@ -210,6 +214,7 @@ def checkmove(deck, face, fi, fj, pi, pj):
     return check, log
 
 
+# Функция проверки и обработки ходов
 def move(deck, face, fig, pos, score, wc):
     desym = [{"a": 0, "b": 1, "c": 2, "d": 3, "e": 4, "f": 5, "g": 6, "h": 7},
              {"a": 7, "b": 6, "c": 5, "d": 4, "e": 3, "f": 2, "g": 1, "h": 0}]
@@ -262,5 +267,3 @@ def move(deck, face, fig, pos, score, wc):
             print(log)
     time.sleep(0.5)
     return deck, check, score, wc
-
-

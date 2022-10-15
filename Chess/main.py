@@ -6,10 +6,12 @@ import movement as mov
 from random import randint
 
 
+# Функция очистки экрана
 def cls():
     os.system('cls')
 
 
+# Функия стартовой доски
 def startboard():
     deck = [
         ["5", "4", "3", "2", "1", "3", "4", "5"],
@@ -34,6 +36,7 @@ def startboard():
     return deck
 
 
+# Функция, присваивающая цвет фигурам
 def boardp(coin, deck):
     ef = ""
     pf = ""
@@ -57,6 +60,7 @@ def boardp(coin, deck):
     return deck
 
 
+# Функция вывода в консоль
 def showdeck(deck, face, turn, score, wc):
     cls()
     figures = {"11": "бКр", "12": "чКр", "21": "бФ ", "22": "чФ ", "31": "бС ", "32": "чС ", "41": "бК ", "42": "чК ",
@@ -66,7 +70,7 @@ def showdeck(deck, face, turn, score, wc):
     ff = ""
     nu = 0
     tb = ""
-    gg=""
+    gg = ""
     if wc[0] == 2 and wc[1] != 2:
         gg = "Победа белых!"
     elif wc[1] == 2 and wc[0] != 2:
@@ -74,9 +78,9 @@ def showdeck(deck, face, turn, score, wc):
     elif wc[0] == 2 and wc[1] == 2:
         gg = "Ничья!"
     if wc[0] == 1 or wc[1] == 1:
-        trn = f'\n              Шах!\n        Ход: {turn} | Ход {turns[turn%2]}\n Счет белых: {score[0]} | Счет черных: {score[1]}\n'
+        trn = f'\n              Шах!\n        Ход: {turn} | Ход {turns[turn % 2]}\n Счет белых: {score[0]} | Счет черных: {score[1]}\n'
     elif wc[0] != 2 and wc[1] != 2:
-        trn = f'\n        Ход: {turn} | Ход {turns[turn%2]}\n Счет белых: {score[0]} | Счет черных: {score[1]}\n'
+        trn = f'\n        Ход: {turn} | Ход {turns[turn % 2]}\n Счет белых: {score[0]} | Счет черных: {score[1]}\n'
     else:
         trn = f'\n         {gg}\n Счет белых: {score[0]} | Счет черных: {score[1]}\n'
     if face == 0:
@@ -106,6 +110,7 @@ def showdeck(deck, face, turn, score, wc):
     print(ff)
 
 
+# Функция поворота доски
 def checkface(deck, state, fa):
     face = 0
     deck2 = deck[:]
@@ -127,6 +132,7 @@ def checkface(deck, state, fa):
     return face, deck2
 
 
+# Главная функция
 def main():
     ga = 0
     while ga != 2:
@@ -148,7 +154,7 @@ def main():
                 pos = input("\n Выберите, куда сделать ход: ")
                 deck, check, score, wc = mov.move(deck, face, fig, pos, score, wc)
             face, deck = checkface(deck, "mi", face)
-            showdeck(deck, face, turn+1, score, wc)
+            showdeck(deck, face, turn + 1, score, wc)
             time.sleep(0.5)
             if wc[0] == 2 or wc[1] == 2:
                 restart = input("\n Введите 1, если хотите играть еще раз\n Введите 2, если хотите выйти из игры: ")
@@ -158,5 +164,6 @@ def main():
                     ga = 2
 
 
+# Запуск программы
 if __name__ == '__main__':
     main()
