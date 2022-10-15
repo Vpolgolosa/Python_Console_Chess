@@ -1,3 +1,4 @@
+# Проверка по вертикали и горизонтали
 def checkladwc(deck, fi, fj, face):
     oenemfig = [["21", "51"], ["22", "52"]]
     check = 0
@@ -25,6 +26,7 @@ def checkladwc(deck, fi, fj, face):
     return check
 
 
+# Проверка по диагонали
 def checkslwc(deck, fi, fj, face):
     oenemfig = [["21", "31", "61"], ["22", "32", "62"]]
     check = 0
@@ -51,6 +53,7 @@ def checkslwc(deck, fi, fj, face):
     return check
 
 
+# Проверка по букве Г
 def checkknwc(deck, fi, fj, face):
     oenemfig = [["41"], ["42"]]
     check = 0
@@ -79,6 +82,7 @@ def checkknwc(deck, fi, fj, face):
     return check
 
 
+# Функция проверки клеток вокруг обоих королей на наличие вражеских фигур
 def wincondition(deck, wc):
     step = 0
     fig = ["12", "11"]
